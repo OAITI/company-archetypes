@@ -1,0 +1,10 @@
+Label,User,Org,Time,Creation / Innovation,Automation,Prediction,Insight,Action
+Chemists,NA,NA,NA,1,0,0.25,0.5,0
+Forecasters,NA,NA,NA,0,0.25,1,0.5,0.75
+Data Masters,NA,NA,NA,1,1,1,1,1
+Detectives,NA,NA,NA,0.5,0,0.5,1,0.5
+Newbies,NA,NA,NA,0,0,0,0,0
+Robot Makers,NA,NA,NA,0.25,1,0.5,0,1
+Data Decision Makers,NA,NA,NA,0,0,1,1,1
+"Detectives","Yogesh Bansal","OAG",2017-06-27 01:33:36,0.1,0.1,0.0666666666666667,0.0666666666666667,0.1
+"Data Masters","Eric Hare","Omni Analytics Group",2017-06-28 16:12:17,0.833333333333333,0.75,0.666666666666667,0.833333333333333,0.583333333333333

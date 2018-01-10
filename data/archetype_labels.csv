@@ -1,0 +1,8 @@
+Label,Creation / Innovation,Automation,Prediction,Insight,Action
+Chemists,1,0,0.25,0.5,0
+Forecasters,0,0.25,1,0.5,0.75
+Data Masters,1,1,1,1,1
+Detectives,0.5,0,0.5,1,0.5
+Newbies,0,0,0,0,0
+Robot Makers,0.25,1,0.5,0,1
+Data Decision Makers,0,0,1,1,1

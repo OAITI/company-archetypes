@@ -1,0 +1,16 @@
+Question,Creation / Innovation, Automation, Prediction, Insight,Action
+Researching and prototyping innovative new products,1,0,0,0,0
+Exploring modern analytical techniques,1,0,0,0,0
+Researching and prototyping  deep learning models,1,0,0,0,0
+Doing manual/machine-related tasks better and faster,0,1,0,0,0
+Automating processes or manual procedures,0,1,0,0,0
+Improving the precision of statistical estimates,0,1,0,0,0
+Predicting demand or anticipating growth,0,0,1,0,0
+Forecasting trends,0,0,1,0,0
+Keeping track of future possibilities using data,0,0,1,0,0
+Recognising/understanding business processes or finding patterns using data,0,0,0,1,0
+Using data mining techniques for business insight,0,0,0,1,0
+Using dashboards,0,0,0,1,0
+Following an agile as opposed to waterfall development cycle,0,0,0,0,1
+Acting on results from data analysis,0,0,0,0,1
+Prioritizing implementation over careful design of the project,0,0,0,0,1

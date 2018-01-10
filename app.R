@@ -61,6 +61,8 @@ myplot <- ggplot(mydf, aes(RC1,RC2)) + geom_point(aes(color=Label), size=6) +
 # Define UI
 ui <- fluidPage(theme = shinytheme("cerulean"),
                 
+                includeCSS("css/styles.css"),
+                
                 titlePanel("Data Science Company Archetypes"),
                 
                 sidebarLayout(sidebarPanel(

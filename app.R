@@ -63,12 +63,12 @@ ui <- fluidPage(theme = shinytheme("cerulean"),
                 
                 includeCSS("css/styles.css"),
                 
-                titlePanel("Data Science Company Archetypes"),
+                titlePanel("Data Science Archetypes"),
                 
                 sidebarLayout(sidebarPanel(
                     a(href = "https://oaiti.org", target = "_blank", img(src = "images/oaiti_transparent.png", width = "135")),
                     h4("About"),
-                    HTML("Ever wondered if you could define the type of a data science company by its activities? This app tells you the \"data mindset\" of your organization. To get your company archetype, simply answer some questions about the role of various aspects of data science within your organization. To begin, click on <b>Take the Quiz!</b> button below."),
+                    HTML("Ever wondered if you could define the <i>type</i> of a data science organization by its activities? This app tells you the \"data mindset\" of your organization. To get the archetype, simply answer some questions about the role of various aspects of data science within your organization. To begin, click on <b>Take the Quiz!</b> button below."),
                     hr(),
                     actionButton("goButton", "Take the Quiz!",icon=icon("play-circle"))#,
                     #textOutput("debug")
@@ -125,14 +125,14 @@ server <- shinyServer(function(input, output, session) {
         {
             return(list(
                 ## Question UI
-                HTML(paste0("<h3>What is the level of effort devoted to <b>",tolower(data$q_v_d$Question[user$question]), "</b> in your company?</h3>")),
+                HTML(paste0("<h3>What is the level of effort devoted to <b>",tolower(data$q_v_d$Question[user$question]), "</b> in your organization?</h3>")),
                 #tags$style("#q_choice {font-size:20px;}"),
                 radioButtons("q_choice", label="", selected = .5,inline = FALSE,width="400px", choices = c("High" = 1,"High-Medium" = .75,"Medium" = .5,"Low-Medium" = .25,"Low" = 0)),
                 actionButton("ansButton", label = "Submit")
             ))
         } else if (is.null(user$user)) {
             list(
-                h4("Find out which of these archetypes your company fits in!"),
+                h4("Find out which of these archetypes your organization fits in!"),
                 withSpinner(tableOutput("desc")),
                 hr(),
                 withSpinner(plotOutput("descplot", width = 700, height = 700)),
@@ -157,8 +157,8 @@ server <- shinyServer(function(input, output, session) {
             geom_text(size = 6, aes(x = RC1, y = RC2, label = rownames(plotscores)), nudge_y = -0.01) +
             xlim(c(-0.1, 3)) +
             ylim(c(-0.1, 2.1)) +
-            xlab(expression(paste("Low Implementation ", symbol("\254"), symbol("\276"), symbol("\256"), " High Implementation"))) +
-            ylab(expression(paste("Low Innovation ", symbol("\254"), symbol("\276"), symbol("\256"), " High Innovation"))) +
+            xlab(expression(paste("Low Implementation ", symbol("\254"), "    ", symbol("\256"), " High Implementation"))) +
+            ylab(expression(paste("Low Innovation ", symbol("\254"),"    ", symbol("\256"), " High Innovation"))) +
             theme(axis.title.x = element_text(color = "#c50026"),
                   axis.title.y = element_text(color = "#1500a8"),
                   axis.text = element_blank(),
@@ -189,7 +189,7 @@ server <- shinyServer(function(input, output, session) {
             return(list(
                 ## Stat UI
                 h2("Results",align="center"),
-                HTML(paste0("<h3>"," Your company archetype is represented by <b>'",user$pred_label,"'</b>!  <img src='", file_imgs[[user$pred_label]], "' width='90'></h3>")),
+                HTML(paste0("<h3>"," Your archetype is represented by <b>'",user$pred_label,"'</b>!  <img src='", file_imgs[[user$pred_label]], "' width='90'></h3>")),
                 br(),
                 h4(blurb$Description[blurb$Archetype==user$pred_label]),
                 h4(blurb$Details[blurb$Archetype==user$pred_label]),
@@ -197,7 +197,7 @@ server <- shinyServer(function(input, output, session) {
                 withSpinner(plotOutput("mdsplot", width = 700, height = 700)),
                 hr(),
                 strong(h2("Feedback",align="center")),
-                HTML("<h4>Please give us some feedback by selecting the archetype that you think fits your company. We shall use this information to make the quiz more efficient.</h4>"),
+                HTML("<h4>Please give us some feedback by selecting the archetype that you think fits your organization. We shall use this information to make the quiz more efficient.</h4>"),
                 br(),
                 textInput("name_in", "Name", value = "Name", width = NULL, placeholder = NULL),
                 textInput("org_in", "Organization", value = "Organization", width = NULL, placeholder = NULL),

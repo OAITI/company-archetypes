@@ -47,8 +47,8 @@ myplot <- ggplot(mydf, aes(RC1,RC2)) + geom_point(aes(color=Label), size=6) +
     geom_text(size = 6, aes(x = RC1, y = RC2, label = rownames(plotscores)), nudge_y = 0.08) +
     xlim(c(-0.1, 3)) +
     ylim(c(-0.1, 2.1)) +
-    xlab(expression(paste("Low Implementation ", symbol("\254"), symbol("\276"), symbol("\256"), " High Implementation"))) +
-    ylab(expression(paste("Low Innovation ", symbol("\254"), symbol("\276"), symbol("\256"), " High Innovation"))) +
+    xlab(expression(paste("Low Implementation ", symbol("\254"), "   ", symbol("\256"), " High Implementation"))) +
+    ylab(expression(paste("Low Innovation ", symbol("\254"), "   ", symbol("\256"), " High Innovation"))) +
     theme(axis.title.x = element_text(color = "#c50026"),
           axis.title.y = element_text(color = "#1500a8"),
           axis.text = element_blank(),

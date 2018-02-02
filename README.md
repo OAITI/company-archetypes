@@ -1,2 +1,2 @@
 # company-archetypes
-Quiz to assess your data science company's archetype
+Quiz to assess your organization's data science archetype
